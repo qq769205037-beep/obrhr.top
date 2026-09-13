@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动端视口黄金配置：固定宽度、禁止缩放、完美适配刘海屏 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>مرصد الأسواق اللحظي | لماذا تخسر في السوق وكيف تعوض خسائرك؟</title>
+    <style>
+        /* 移动端全局重置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #0b0f19; color: #fff; padding-bottom: 95px; max-width: 480px; margin: 0 auto; overflow-x: hidden; }
+        
+        /* 移动端吸顶导航栏 */
+        .header { position: fixed; top: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; height: 54px; background: rgba(11,15,25,0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; padding: 0 16px; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .logo { font-size: 13.5px; font-weight: 800; color: #f59e0b; display: flex; align-items: center; gap: 6px; }
+        .btn-top { background: #25d366; color: #fff; padding: 5px 12px; border-radius: 20px; font-size: 11.5px; font-weight: 800; text-decoration: none; box-shadow: 0 2px 8px rgba(37,211,102,0.3); }
+
+        /* 主体容器 */
+        .container { padding: 66px 14px 16px 14px; }
+
+        /* 移动端行情模拟小组件 */
+        .market-ticker { background: #131c2e; border: 1px solid rgba(0, 188, 212, 0.3); border-radius: 12px; padding: 12px; margin-bottom: 16px; }
+        .ticker-header { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; color: #00bcd4; margin-bottom: 8px; font-weight: 700; }
+        .ticker-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 12px; }
+        .ticker-row:last-child { border-bottom: none; }
+        .up { color: #22c55e; font-weight: 700; }
+        .down { color: #ef4444; font-weight: 700; }
+
+        /* 痛点共鸣卡片 */
+        .pain-box { background: linear-gradient(145deg, #161f30, #101726); border: 1.5px solid rgba(245, 158, 11, 0.3); border-radius: 14px; padding: 18px 14px; margin-bottom: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+        .badge-pain { display: inline-block; background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 10px; border-radius: 20px; font-size: 10.5px; font-weight: 700; margin-bottom: 10px; border: 1px solid rgba(239, 68, 68, 0.3); }
+        h1 { font-size: 18px; line-height: 1.4; margin-bottom: 10px; font-weight: 800; color: #fff; }
+        h1 span { color: #f59e0b; }
+        
+        .pain-list { list-style: none; font-size: 12.5px; color: #cbd5e1; margin-top: 12px; }
+        .pain-list li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 6px; line-height: 1.45; }
+
+        /* 解决方案卡片 */
+        .solution-card { background: #131c2e; border-radius: 12px; padding: 14px; margin-bottom: 16px; border: 1px solid rgba(37, 211, 102, 0.2); }
+        .solution-title { font-size: 13px; font-weight: 700; color: #25d366; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+        .solution-desc { font-size: 12px; color: #94a3b8; line-height: 1.5; }
+
+        /* 极高点击率的WhatsApp底部固定/常驻大按钮 */
+        .wa-btn-box { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: rgba(11,15,25,0.95); backdrop-filter: blur(10px); padding: 10px 14px; z-index: 999; border-top: 1px solid rgba(255,255,255,0.08); }
+        .wa-btn { display: flex; justify-content: center; align-items: center; gap: 6px; width: 100%; background: linear-gradient(135deg, #25d366, #1ebe5d); color: white; text-align: center; padding: 14px 0; border-radius: 30px; font-size: 14px; font-weight: 800; text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+        .wa-btn:active { transform: scale(0.98); }
+
+        /* 信任社会背书 */
+        .social-proof { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; text-align: center; font-size: 11.5px; color: #94a3b8; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.05); }
+        .social-proof strong { color: #f59e0b; }
+
+        /* 谷歌合规免责声明 */
+        .disclaimer { font-size: 9.5px; color: #475569; text-align: center; line-height: 1.4; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部移动端导航 -->
+    <div class="header">
+        <div class="logo">
+            <span>📈</span> مرصد الأسواق اللحظي
+        </div>
+        <a href="https://wa.me/你的WhatsApp群链接" class="btn-top">انضم للجروب 🟢</a>
+    </div>
+
+    <!-- 移动端内容容器 -->
+    <div class="container">
+        
+        <!-- 移动端行情模拟器 -->
+        <div class="market-ticker">
+            <div class="ticker-header">
+                <span>🔴 مؤشرات السيولة والحركة الحية</span>
+                <span id="live-time" style="color: #94a3b8; font-size: 10.5px;">محدث الآن</span>
+            </div>
+            <div class="ticker-row">
+                <span>🇸🇦 السوق السعودي (تداول - TASI)</span>
+                <span class="up">12,450.20 (+0.85%)</span>
+            </div>
+            <div class="ticker-row">
+                <span>🇺🇸 مؤشر أسهم التكنولوجيا (NASDAQ)</span>
+                <span class="up">18,920.40 (+1.42%)</span>
+            </div>
+            <div class="ticker-row">
+                <span>⚡ قطاع الطاقة والأسهم القيادية</span>
+                <span class="down">مراقبة التذبذب 🔒</span>
+            </div>
+        </div>
+
+        <!-- 痛点共鸣模块 -->
+        <div class="pain-box">
+            <div class="badge-pain">⚠️ صرخة لكل متداول يعاني في السوق</div>
+            <h1>لماذا تخسر بينما يربح الآخرون في <span>الأسهم السعودية والأمريكية</span>؟</h1>
+            <p style="font-size: 12.5px; color: #94a3b8; line-height: 1.45;">إذا كنت تعاني من الشراء عند القمة والبيع عند القاع، أو لديك أسهم متعثرة، فأنت لست وحدك...</p>
+            
+            <ul class="pain-list">
+                <li>❌ <strong>تشتت الأفكار:</strong> لا تتابع اللحظة المناسبة للخروج والدخول بمفردك؟</li>
+                <li>❌ <strong>غياب التوجيه:</strong> تدخل الصفقات متأخراً وتخرج بخسائر متكررة؟</li>
+                <li>❌ <strong>نقص البيانات:</strong> لا تستطيع قراءة تحركات السيولة بدقة؟</li>
+            </ul>
+        </div>
+
+        <!-- 解决方案 -->
+        <div class="solution-card">
+            <div class="solution-title">
+                <span>💡 الحل هنا: انضم إلى مجموعة واتساب التفاعلية</span>
+            </div>
+            <div class="solution-desc">
+                لقد أنشأنا هذا المجتمع لنضع بين يديك يومياً خلاصة التحليلات الفنية، ونقاشات الخبراء حول الأسهم الأكثر حركة، وكيفية إعادة هيكلة محفظتك وتجنب الخسائر.
+            </div>
+        </div>
+
+        <!-- 信任社会背书 -->
+        <div class="social-proof">
+            انضم إلينا اليوم أكثر من <strong>4,200 متداول</strong> يتشاركون التحليلات والنقاشات الحية داخل المجموعة.
+        </div>
+
+        <!-- 谷歌防封护身符：合规免责声明 -->
+        <div class="disclaimer">
+            إخلاء المسؤولية: المحتوى والنقاشات المقدمة داخل المجموعة لأغراض التعليم والبحث التحليلي والفني فقط، ولا تُعتبر نصيحة استثمارية مباشرة أو توصية بيع وشراء.
+        </div>
+
+    </div>
+
+    <!-- 底部固定常驻的 WhatsApp 引流大按钮（手机屏幕专属设计，随手可点，极大提升转化率） -->
+    <div class="wa-btn-box">
+        <a href="https://wa.me/你的WhatsApp群链接" class="wa-btn">
+            <span>💬 انضم الآن إلى مجموعة واتساب وتخلص من الخسائر 🚀</span>
+        </a>
+    </div>
+
+    <!-- 动态时间戳JS -->
+    <script>
+        const now = new Date();
+        document.getElementById('live-time').innerText = now.toLocaleDateString() + ' ' + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    </script>
+</body>
+</html>
